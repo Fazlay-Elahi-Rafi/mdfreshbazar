@@ -1,0 +1,75 @@
+.head {
+    padding: 0.8rem 0;
+    background: #3BB77E;
+
+    &__title {
+        margin: 0 0;
+        color: $white;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    &__select {
+        margin: 0 0;
+        background: transparent;
+        border: 0;
+        text-transform: capitalize;
+        color: $white;
+        font-family: $font;
+        font-weight: 600;
+        outline: 0;
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        &-border {
+            border-right: 1px solid #ffffff6b;
+            padding: 0 1rem 0 0;
+
+            // min-width: 992px;
+            @include lg-screen {
+                padding: 0 0.8rem 0 0;
+            }
+
+            // min-width: 1200px;
+            @include xl-screen {
+                padding: 0 1rem 0 0;
+            }
+
+
+        }
+
+        &-opt {
+            color: $black;
+            font-family: $font;
+        }
+
+        &-icon {
+            font-size: 1.2rem;
+            color: $white;
+        }
+    }
+
+
+    &__ul {
+        margin: 0 0;
+        padding: 0 0;
+        display: flex;
+        justify-content: end;
+
+        &-li {
+            margin: 0 1rem;
+            list-style: none;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $white;
+            text-transform: capitalize;
+            font-family: $font2;
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: $white  !important;
+        }
+    }
+}
