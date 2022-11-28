@@ -8,7 +8,7 @@ export default function App() {
   useEffect(() => {
     webFont.load({
       google: {
-        families: ["Quicksand", "Nunito Sans", "Varela Round"],
+        families: ["Quicksand", "Nunito Sans", "Varela Round", "Yellowtail"],
       },
     });
   }, []);

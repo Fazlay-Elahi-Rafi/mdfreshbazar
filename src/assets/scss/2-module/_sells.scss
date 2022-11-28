@@ -1,0 +1,270 @@
+.sells {
+    margin: 0 0 5rem 0;
+    overflow: hidden;
+
+    &__ul {
+        margin: 0 0;
+        padding: 0 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 0 0 1rem;
+            cursor: pointer;
+            color: $C-1;
+            font-family: $font2;
+            font-size: 1rem;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                transition: all 0.2s linear;
+                color: $alert !important;
+                border-bottom: 2px solid $alert;
+            }
+        }
+
+        &-active {
+            color: $alert !important;
+            border-bottom: 2px solid $alert !important;
+        }
+
+    }
+
+
+    &__card {
+        margin: 0 0;
+
+        &-items {
+            border: 1px solid #dddddd !important;
+            transition: all 0.3s linear !important;
+
+            &:hover {
+                transition: all 0.3s linear !important;
+                border: 1px solid #39b47beb !important;
+                box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1) !important;
+            }
+        }
+
+        &:hover &-icons {
+            display: flex;
+            opacity: 1;
+            transition: all 0.3s linear !important;
+        }
+
+
+
+        &-layer {
+            background: #00000026;
+            border-radius: 5px;
+        }
+
+        &-img {
+            border-radius: 5px;
+        }
+
+        &-image {
+            margin: 0 0;
+            position: relative;
+
+        }
+
+        &-icons {
+            transition: all 0.3s linear !important;
+            position: absolute;
+            top: 40%;
+            right: 35%;
+            opacity: 0;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 99;
+            box-shadow: 0px 2px 4px 0 rgba(105, 200, 156, 0.3);
+            background: #ffff;
+            border-radius: 3px;
+
+
+            &--div {
+                padding: 5px 0;
+                color: #39b47b;
+                border: 1px solid #39b47beb !important;
+                font-size: 1.2rem;
+                transition: all 0.3s linear;
+
+                &:nth-child(1) {
+                    border-right: 1px solid #39b47beb !important;
+                    border-radius: 3px 0 0 3px;
+                }
+
+                &:nth-child(2) {
+                    border-left: 1px solid transparent !important;
+                    border-radius: 0 3px 3px 0;
+                }
+
+                &:hover {
+                    transition: all 0.3s linear;
+                    color: #ffff;
+                    background: #39b47b;
+                }
+            }
+        }
+
+        &-title {
+            margin: -8rem 0 3rem 0;
+            color: white !important;
+            font-family: $font2;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+
+        &-body {
+            margin: 3rem 0 1rem 0;
+
+            &--ul {
+                margin: 0.2rem 0 0.8rem 0.8rem !important;
+            }
+        }
+
+        &-top {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                transition: all 0.3s ease-in;
+                transform: scale(1);
+            }
+
+            &:hover img {
+                transition: all 0.3s ease-in;
+                transform: scale(1.1);
+            }
+        }
+
+        &-disc {
+            position: absolute;
+            background: #f74b81;
+            color: white;
+            text-transform: capitalize;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 3px;
+            top: 10px;
+            left: 9px;
+            z-index: 99;
+        }
+
+        &-progress {
+            height: 6px !important;
+            border-radius: 40px !important;
+            margin: 0 0 5px 0;
+
+            &--div {
+                background: #39b47beb !important;
+            }
+        }
+
+        &-sold {
+            text-transform: capitalize;
+            color: #405564;
+            font-size: 0.9rem;
+        }
+    }
+
+
+
+    &:hover &__arrowRight {
+        right: 0px !important;
+        transition: all 0.3s ease !important;
+
+        // min-width: 576px;
+        @include sm-screen {
+            right: -2px !important;
+        }
+    }
+
+    &:hover &__arrowLeft {
+        left: 0px !important;
+        transition: all 0.3s ease !important;
+
+        // min-width: 576px;
+        @include sm-screen {
+            left: -2px !important;
+        }
+    }
+
+    &__arrowRight {
+        top: 32% !important;
+        box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.15) !important;
+        right: -100rem !important;
+        background: white;
+        color: #2ea26d;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        font-size: 1.3rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        cursor: pointer;
+
+        // min-width: 400px;
+        @include xsss-screen {
+            top: 37% !important;
+        }
+
+        // min-width: 576px;
+        @include sm-screen {
+            width: 3rem !important;
+            height: 3rem !important;
+            font-size: 1.5rem !important;
+        }
+
+        // min-width: 1440px;
+        @include xliii-screen {
+            top: 40% !important;
+        }
+    }
+
+    &__arrowLeft {
+        top: 32% !important;
+        box-shadow: 0px 5px 16px 2px rgba(0, 0, 0, 0.15) !important;
+        left: -100rem !important;
+        background: white;
+        color: #2ea26d;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        font-size: 1.3rem !important;
+        transition: all 0.2s ease !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        cursor: pointer;
+
+
+        // min-width: 400px;
+        @include xsss-screen {
+            top: 37% !important;
+        }
+
+        // min-width: 576px;
+        @include sm-screen {
+            width: 3rem !important;
+            height: 3rem !important;
+            font-size: 1.5rem !important;
+        }
+
+        // min-width: 1440px;
+        @include xliii-screen {
+            top: 40% !important;
+        }
+    }
+
+
+    .slick-slide {
+        padding: 0 6px;
+    }
+
+}

@@ -1,0 +1,91 @@
+.menu {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    background: $white;
+    box-shadow: 0px -5px 15px 0px rgba(134, 130, 130, 0.151);
+    border-radius: 5px 5px 0 0;
+
+    &__list {
+        &-li {
+            padding: 9px 1.2rem;
+            border-radius: 2px;
+            transition: all 0.3s ease-in;
+
+            // max-width: 320px;
+            @include xxs-screen {
+                padding: 9px 1rem !important
+            }
+
+            &:hover {
+                transition: all 0.3s ease-in;
+                background: #75d6aa2e !important;
+            }
+
+            &:hover &--span {
+                transition: all 0.3s ease-in;
+                color: #119744 !important;
+            }
+
+            &:hover &--icon {
+                transition: all 0.3s ease-in;
+                color: #119744 !important;
+            }
+
+            &--span {
+                transition: all 0.3s ease-in;
+                font-size: 0.6rem;
+                font-family: $font2;
+                font-weight: 600;
+                color: $C-1;
+                text-transform: uppercase;
+
+                // min-width: 400px;
+                @include xsss-screen {
+                    font-size: 0.7rem;
+                }
+            }
+
+            &--icon {
+                transition: all 0.3s ease-in;
+                font-size: 1.1rem;
+                color: $C-1 !important;
+            }
+
+            &--btn {
+                background: transparent;
+                border: 0;
+                padding: 0;
+            }
+        }
+    }
+
+
+
+    &__heart {
+        &-bg {
+            background: transparent !important;
+            justify-content: center;
+            padding: 0 0;
+
+            &--icon {
+                color: $C-1 !important;
+            }
+        }
+
+        &-num {
+            top: -13px;
+            left: 25px;
+            right: 0;
+            padding: 8px;
+            width: 21px;
+
+            // min-width: 400px;
+            @include xsss-screen {
+                left: 33px;
+            }
+        }
+    }
+}

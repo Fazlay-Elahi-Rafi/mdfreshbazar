@@ -1,0 +1,78 @@
+.category {
+    margin: 0 0 5rem 0;
+    overflow: hidden;
+
+    &__card {
+        width: 100%;
+
+        &-bg {
+            text-decoration: none;
+            background: #f4f6fa;
+            border-radius: 5px;
+            padding: 2rem 0;
+            border: 1px solid transparent;
+            transition: all 0.2s ease-in;
+            display: block;
+            height: 12rem;
+
+            &:hover {
+                transition: all 0.2s ease-in;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+                border: 1px solid #39b47beb;
+                background: transparent;
+            }
+        }
+
+        &-text {
+            font-family: $font2;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1rem 0 0 0;
+            text-transform: capitalize;
+            color: $C-1;
+        }
+
+        &-img {
+            width: 4.2rem;
+        }
+    }
+
+    &__cls {
+        background: #f4f6fa;
+        color: $C-1;
+
+        cursor: pointer;
+        border-radius: 5px;
+        width: 3rem;
+        height: 2rem;
+        font-size: 1.2rem;
+        transition: all 0.2s ease-in !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            transition: all 0.2s ease-in !important;
+            background: #2ea26d;
+            color: white;
+        }
+    }
+
+    &__arrowRight {
+        position: absolute;
+        z-index: 99;
+        top: -36%;
+        right: 1rem;
+    }
+
+    &__arrowLeft {
+        position: absolute;
+        z-index: 99;
+        top: -36%;
+        right: 6rem;
+    }
+
+    .slick-slide {
+        padding: 0 6px;
+    }
+}

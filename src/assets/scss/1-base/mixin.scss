@@ -6,6 +6,7 @@
     @content;
   }
 }
+
 //Extra Small Screen
 @mixin xs-screen {
   @media screen and (max-width: 575px) {

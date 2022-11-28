@@ -1,0 +1,67 @@
+.nav {
+    margin: 0 0;
+
+    &__border {
+        border-top: 1px solid #e8e8e8;
+        padding: 1.5rem 0 0 0;
+    }
+
+    &__list {
+        margin: 0 0;
+        padding: 0 0;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-family: $font;
+            font-size: 1rem;
+            font-weight: 700;
+            color: $C-1;
+
+            &:hover {
+                color: #2ea26d !important;
+            }
+        }
+    }
+
+    &__icon {
+        margin: 0 0.9rem 0 0;
+        font-size: 1.5rem;
+        color: #2ea26d;
+
+
+        // min-width: 1200px;
+        @include xl-screen {
+            font-size: 1.7rem
+        }
+    }
+
+    &__small {
+        font-family: $font;
+        font-weight: 600;
+        display: block;
+        font-size: 0.85rem;
+        color: $C-1;
+        text-transform: capitalize;
+    }
+
+    &__text {
+        font-family: $font;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: $C-1;
+
+        // min-width: 1200px;
+        @include xl-screen {
+            font-size: 1rem
+        }
+
+        ;
+    }
+}

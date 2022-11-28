@@ -1,0 +1,123 @@
+.smallNav {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100rem;
+    top: 0;
+    left: 0;
+    display: none !important;
+
+    &__show {
+        display: block !important;
+
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background: #7c7c7c63;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+
+    &__body {
+        background: $white;
+        width: 280px;
+        height: 100%;
+        z-index: 9999;
+        position: relative;
+
+        &-head {
+            border-bottom: 1px solid #c7c2c2;
+
+            &--text {
+                font-family: $font2;
+                font-size: 1.3rem;
+                color: #2ea26d;
+                font-weight: 600;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                margin: 0;
+            }
+
+            &--icon {
+                color: #2ea26d;
+                margin: -3px 5px 0 0;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__close {
+        margin: 0 0;
+
+        &-div {
+            transform: translate(3rem, 0);
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: end;
+        }
+
+        &-icon {
+            background: white;
+            padding: 12px 9px;
+            font-size: 44px;
+            border-radius: 0 50px 50px 0px;
+            cursor: pointer;
+        }
+    }
+
+    &__ul {
+        overflow-y: scroll;
+        height: calc(100vh - 130px);
+        margin: 0 0;
+        padding: 0 0;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #2ea26ebd;
+            border-radius: 10px;
+        }
+
+        li {
+            list-style: none;
+            padding: 0px 0;
+            border-bottom: 1px solid #c7c2c2;
+
+            &:nth-child(1) {
+                border-top: 1px solid #c7c2c2;
+            }
+
+            a {
+                display: flex;
+                padding: 8px 0;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-family: $font2;
+                color: $C-1  !important;
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    &__footer {
+        margin: 10px 0 0 0;
+
+        &--text {
+            font-size: 1rem;
+            font-family: $font2;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+}

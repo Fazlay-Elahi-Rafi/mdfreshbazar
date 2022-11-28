@@ -1,0 +1,39 @@
+.service {
+    margin: 0 0 3.5rem 0;
+
+    &__body {
+        background: #F5F6F7;
+        padding: 1.5rem 0;
+        border-radius: 10px;
+        border: 1px solid #14b35159;
+        cursor: pointer;
+    }
+
+    &__text {
+        margin: 0 0;
+        font-family: $font2;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: $C-1;
+        text-transform: capitalize;
+
+        // max-width: 575px;
+        @include xs-screen {
+            font-size: 1rem !important;
+        }
+    }
+
+    &__para {
+        margin: 0 0;
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #a9aabd;
+        text-transform: capitalize;
+
+        // max-width: 575px;
+        @include xs-screen {
+            font-size: 0.9rem !important;
+        }
+    }
+}

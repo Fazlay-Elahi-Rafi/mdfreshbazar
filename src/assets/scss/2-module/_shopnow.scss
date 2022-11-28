@@ -1,0 +1,67 @@
+.shop {
+    margin: 0 0 5rem 0;
+
+    &__item {
+        &-bg {
+            background: #f0e8d5;
+            padding: 0 0 0 1rem !important;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        &-title {
+            font-family: $font2;
+            text-transform: capitalize;
+            color: $C-1;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 1.5rem 0;
+
+            // min-width: 1200px;
+            @include xl-screen {
+                font-size: 1.4rem;
+            }
+
+            // min-width: 1400px;
+            @include xlii-screen {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-btn {
+            box-shadow: none !important;
+            outline: 0 !important;
+            background: #39b47beb !important;
+            color: $white  !important;
+            text-transform: uppercase;
+            font-weight: 500 !important;
+            font-size: 0.7rem !important;
+            border-radius: 3px !important;
+            padding: 7px 1.1rem !important;
+            border: 1px solid transparent !important;
+            transition: all 0.2s ease-in !important;
+
+            &:hover {
+                transition: all 0.2s ease-in !important;
+                border: 1px solid #39b47beb !important;
+                color: #39b47beb !important;
+                background: #DEF9EC !important;
+            }
+
+            // min-width: 1200px;
+            @include xl-screen {
+                font-size: 0.9rem !important;
+            }
+        }
+
+        &-icon {
+            font-size: 1rem;
+            margin: -1px -5px 0 5px;
+
+            // min-width: 1200px;
+            @include xl-screen {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
