@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { FaHeart, FaShoppingBasket } from "react-icons/fa";
 import { ImSearch } from "react-icons/im";
@@ -7,15 +9,17 @@ import logo from "../../img/logo.png";
 import user from "../../img/user.jpg";
 
 export default function Middle() {
+  const { total_items } = useSelector((state) => state.CartReducer);
+
   return (
     <section className="middle">
       <div className="container">
-        {/* Head One */}
+        {/* Head lg Device */}
         <div className="row align-items-center d-none d-md-flex">
           <div className="col-2 p-md-0">
-            <a href="#">
+            <Link to="/">
               <img className="img-fluid w-50" src={logo} alt="logo" />
-            </a>
+            </Link>
           </div>
 
           <div className="col-2 p-md-0">
@@ -70,17 +74,17 @@ export default function Middle() {
           <div className="col-2 p-md-0">
             <div className="d-flex justify-content-end align-items-center">
               <div className="middle__heart mx-4">
-                <div className="middle__heart-bg">
+                <Link to="/wishlist" className="middle__heart-bg">
                   <FaHeart className="middle__heart-bg--icon" />
                   <sup className="middle__heart-bg--num">0</sup>
-                </div>
+                </Link>
               </div>
-              <div className="middle__heart">
+              <Link to="/cart" className="middle__heart">
                 <div className="middle__heart-bg">
                   <FaShoppingBasket className="middle__heart-bg--icon" />
-                  <sup className="middle__heart-bg--num">0</sup>
+                  <sup className="middle__heart-bg--num">{total_items}</sup>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -123,9 +127,9 @@ export default function Middle() {
           </div>
 
           <div className="col-6 col-sm-5 text-center p-0">
-            <a href="#">
+            <Link to="/">
               <img className="img-fluid w-50" src={logo} alt="logo" />
-            </a>
+            </Link>
           </div>
 
           <div className="col-3">

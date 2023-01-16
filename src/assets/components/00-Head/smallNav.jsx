@@ -1,11 +1,9 @@
 import React from "react";
-
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { GrTextAlignRight } from "react-icons/gr";
-
-import logo from "../../img/logo.png";
 
 export default function SmallNav() {
   const dispatch = useDispatch();
@@ -47,6 +45,37 @@ export default function SmallNav() {
               </li>
               <li>
                 <a href="#">blog</a>
+              </li>
+              <li>
+                <div className="nav__list-dropdown">
+                  <div className="dropdown">
+                    <a
+                      href="#"
+                      className="btn dropdown-toggle nav__list-dropdown--btn"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      page
+                    </a>
+                    <ul
+                      className="dropdown-menu nav__list-dropdown--ul"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <Link to="/cart" className="dropdown-item" href="#">
+                          cart
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="*" className="dropdown-item" href="#">
+                          404
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
               <li>
                 <a href="#">contact</a>

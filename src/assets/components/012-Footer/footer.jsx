@@ -21,9 +21,15 @@ import payment2 from "../../img/p-2.png";
 import payment3 from "../../img/p-3.png";
 import payment4 from "../../img/p-4.png";
 
+import News from "../10-News_Letter/news";
+import Service from "../11-Service/service";
+
 export default function Footer() {
   return (
     <>
+      <News />
+      <Service />
+
       <footer className="footer mb-5 mb-lg-0">
         <div className="container">
           <div className="row">

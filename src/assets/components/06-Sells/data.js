@@ -1,18 +1,15 @@
-export const Data = [
+export const Menu = [
   {
     id: 1,
     type: "featured",
-    name: "featured items",
   },
   {
     id: 2,
     type: "popular",
-    name: "popular items",
   },
   {
     id: 3,
     type: "new",
-    name: "new items",
   },
 ];
 
@@ -27,11 +24,13 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
     oldPrice: 10,
     price: 15,
     sold: 50,
     quantity: 5,
-    rating: 3.0,
+    rating: 3.5,
     save: "10%",
   },
   {
@@ -43,6 +42,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-6-min_kpgmpf.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-6-min_kpgmpf.png",
     oldPrice: 10,
     price: 15,
@@ -61,6 +62,8 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-5-min_fxsjah.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-5-min_fxsjah.png",
     oldPrice: 20,
     price: 15,
     sold: 35,
@@ -77,6 +80,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-3-min_p5r5e2.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-3-min_p5r5e2.png",
     oldPrice: 25,
     price: 15,
@@ -95,6 +100,8 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-12-min_zgfnr8.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-12-min_zgfnr8.png",
     oldPrice: 35,
     price: 20,
     sold: 35,
@@ -111,6 +118,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-11-min_sujpja.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-11-min_sujpja.png",
     oldPrice: 50,
     price: 20,
@@ -129,6 +138,8 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-9-min_zuqr1a.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-9-min_zuqr1a.png",
     oldPrice: 25,
     price: 30,
     sold: 60,
@@ -145,6 +156,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-4-min_eicocr.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629828/fruitsBazzar/img-4-min_eicocr.png",
     oldPrice: 20,
     price: 80,
@@ -163,6 +176,8 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629837/fruitsBazzar/img-10-min_cppik5.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629837/fruitsBazzar/img-10-min_cppik5.png",
     oldPrice: 20,
     price: 80,
     sold: 50,
@@ -179,6 +194,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629834/fruitsBazzar/img-8-min_hj55cr.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629834/fruitsBazzar/img-8-min_hj55cr.png",
     oldPrice: 20,
     price: 80,
@@ -197,6 +214,8 @@ export const Products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-2-min_ivninn.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-2-min_ivninn.png",
     oldPrice: 20,
     price: 80,
     sold: 50,
@@ -213,6 +232,8 @@ export const Products = [
     about2:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
     image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-7-min_oljns9.png",
+    image_magnify:
       "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-7-min_oljns9.png",
     oldPrice: 20,
     price: 80,

@@ -1,0 +1,170 @@
+.cart {
+    padding: 5rem 0;
+
+    &__table {
+        &-head {
+            margin: 0 0;
+            border-bottom: 1px solid $border;
+
+            &--p {
+                margin: 0 0;
+                color: $C-1;
+                text-transform: capitalize;
+                font-size: 1.1rem;
+                font-family: $font7;
+                font-weight: 600;
+                text-align: center;
+                padding: 0 0 1rem 0;
+            }
+        }
+
+        &-body {
+            &--m {
+                margin: 2rem 0 0 0;
+            }
+
+            &--img {
+                background: #F5F6F7;
+                border-radius: 3px;
+                border: 1px solid #14b35159;
+            }
+        }
+
+        &-name {
+            text-transform: capitalize;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: $font2;
+            color: $C-1;
+            display: block;
+            transition: all 0.3s linear;
+
+            &:hover {
+                transition: all 0.3s linear;
+                color: $alert;
+            }
+
+            // min-width: 768px;
+            @include md-screen {
+                font-size: 1.1rem;
+            }
+
+            // min-width: 992px;
+            @include lg-screen {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-cate {
+            text-transform: capitalize;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: $font2;
+            color: $C-1;
+        }
+
+        &-price {
+            margin: 2rem 0 0 0;
+            font-size: 1.15rem;
+            font-weight: 500;
+            font-family: $font7;
+            color: $C-1;
+        }
+
+        &-num {
+            padding: 0 16px;
+        }
+
+        &-i {
+            margin: 0 0;
+            color: $C-1;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s linear;
+
+            &:hover {
+                transition: all 0.3s linear;
+                color: $alert;
+            }
+        }
+
+        &-del {
+            margin: 0 0;
+            color: $num;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s linear;
+
+            &:hover {
+                color: $btn;
+                transition: all 0.3s linear;
+            }
+        }
+
+        &-border {
+            margin: 0 0;
+            border-bottom: 1px solid $cate;
+        }
+    }
+
+    &__clearbtn {
+        margin: 2rem 0 0 0;
+        // background: #f34d11d4 !important;
+        background: #f34d11d4;
+        color: $white;
+        box-shadow: none !important;
+        outline: 0 !important;
+        text-transform: uppercase;
+        font-weight: 500 !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 2rem;
+        letter-spacing: 1px;
+        border: 0;
+        border-radius: 3px;
+        transition: all 0.3s linear;
+
+        &:hover {
+            transition: all 0.3s linear;
+            background: #df440bcf;
+            // background: #df440bcf !important;
+        }
+    }
+
+    &__empty {
+        margin: 0 0;
+        text-align: center;
+
+        &-text {
+            font-size: 2rem;
+            font-family: $font2;
+            font-weight: 600;
+            color: $C-1;
+            line-height: 3rem;
+        }
+
+        &-span {
+            color: $alert;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            margin: 2rem auto 0 auto;
+            background: $alert !important;
+            color: $white;
+            padding: 0.9rem 2rem;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transition: all 0.2s linear;
+                background: #38893c !important;
+            }
+
+            &--i {
+                font-size: 1.4rem;
+                transform: translate(-6px, -1px);
+            }
+        }
+    }
+}

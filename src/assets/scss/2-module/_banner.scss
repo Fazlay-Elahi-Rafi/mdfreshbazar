@@ -1,0 +1,81 @@
+.banner {
+    margin: 5rem 0 0 0;
+
+    &__card {
+        background: transparent;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 0 0 !important;
+        margin: 0 0 !important;
+
+        img {
+            height: 22rem;
+        }
+
+        &-layer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to left, rgba(6, 23, 56, 0.6), rgba(17, 151, 68, 0.6));
+            margin: 0 0;
+            padding: 0 0 !important;
+        }
+
+        &-title {
+            margin: 0 0;
+            font-family: $font6;
+            font-size: 2rem;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+
+            // min-width: 568px;
+            @include sm-screen {
+                font-size: 2.5rem;
+            }
+        }
+
+        &-list {
+            margin: 1rem 0 0 0;
+            padding: 0 0;
+            display: flex;
+            justify-content: center;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-family: $font2;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    transition: all 0.3s linear;
+                    color: $alert;
+                    border-bottom: 2px solid $alert;
+                }
+            }
+
+            &--divide {
+                color: $white;
+                margin: 0 10px;
+            }
+
+            &--active {
+                font-family: $font2;
+                text-transform: capitalize;
+                color: #cccccc;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+}

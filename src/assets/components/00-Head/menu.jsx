@@ -1,14 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { FaHeart, FaShoppingBasket } from "react-icons/fa";
 import { IoHomeOutline, IoListOutline } from "react-icons/io5";
-import { useSelector, useDispatch } from "react-redux";
 
 import SmallNav from "./smallNav";
 
 export default function Menu() {
   const dispatch = useDispatch();
   const { sideBar } = useSelector((any) => any.ClickRedu);
+  const { total_items } = useSelector((state) => state.CartReducer);
 
   return (
     <>
@@ -41,9 +43,9 @@ export default function Menu() {
                 </button>
               </li>
               <li className="menu__list-li">
-                <a
+                <Link
+                  to="/wishlist"
                   className="d-flex justify-content-start align-items-center"
-                  href="#"
                 >
                   <div className="middle__heart">
                     <div className="menu__heart-bg middle__heart-bg">
@@ -56,25 +58,25 @@ export default function Menu() {
                       <span className="menu__list-li--span">wishlist</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </li>
               <li className="menu__list-li">
-                <a
+                <Link
+                  to="/cart"
                   className="d-flex justify-content-start align-items-center"
-                  href="#"
                 >
                   <div className="middle__heart">
                     <div className="menu__heart-bg middle__heart-bg">
                       <FaShoppingBasket className="menu__list-li--icon middle__heart-bg--icon" />
                       <sup className="menu__heart-num middle__heart-bg--num">
-                        0
+                        {total_items}
                       </sup>
                     </div>
                     <div className="">
                       <span className="menu__list-li--span">cartlist</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

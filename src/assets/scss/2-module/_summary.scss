@@ -1,0 +1,61 @@
+.cart {
+    &__summary {
+        margin: 0 0;
+        border-top: 1px solid transparent;
+        border: 1px solid $border-2;
+        border-radius: 2px;
+
+        &-hr {
+            border-bottom: 1px solid $black;
+        }
+
+        &-heading {
+            background: $C-1;
+            font-size: 1.2rem;
+            font-family: $font7;
+            color: $white;
+            text-transform: uppercase;
+            padding: 0.8rem 0 0.8rem 1rem;
+            border-radius: 2px;
+            margin: 0 0 1.5rem 0;
+        }
+
+        &-text {
+            font-family: $font7;
+            color: $C-1;
+            font-size: 1.15rem;
+            padding: 0 0.8rem;
+            margin: 0 0 1.5rem 0;
+            text-transform: capitalize;
+        }
+
+        &-price {
+            font-family: $font7;
+            font-weight: 600;
+            color: $C-1;
+            font-size: 1rem;
+            padding: 0 0.8rem;
+            margin: 0 0 1.5rem 0;
+        }
+
+        &-btn {
+            margin: 0 0.8rem 1.5rem 0;
+            box-shadow: none !important;
+            outline: 0 !important;
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: 500 !important;
+            font-size: 0.9rem !important;
+            border-radius: 3px !important;
+            padding: 0.6rem 1rem;
+            background: #26b85ec2 !important;
+            border: 0;
+            transition: all 0.3s linear;
+
+            &:hover {
+                transition: all 0.3s linear;
+                background: #39b47beb !important;
+            }
+        }
+    }
+}

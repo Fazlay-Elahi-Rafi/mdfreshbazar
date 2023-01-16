@@ -1,0 +1,208 @@
+.view {
+    &__desc {
+        margin: 4rem 0;
+
+        &-body {
+            margin: 0 0;
+            border: 1px solid #ececec;
+            background: $white;
+            box-shadow: 0px 3px 9px 3px rgba(171, 147, 147, 0.16);
+            border-radius: 10px;
+            padding: 2.5rem 0;
+        }
+
+        &-list {
+            margin: 0 0 2rem 0 !important;
+            border-bottom: 1px solid #ececec !important;
+            justify-content: center;
+
+            li button {
+                margin: 0 1rem 0 0;
+                font-family: $font6;
+                font-size: 1rem;
+                text-transform: capitalize;
+                color: #39404a !important;
+                background: transparent !important;
+                border-color: transparent !important;
+                padding: 0 0 0.3rem 0rem !important;
+            }
+
+            .active {
+                color: $alert !important;
+                border-bottom: 2px solid $alert !important;
+            }
+        }
+
+        .fade:not(.show) {
+            display: none;
+        }
+
+        &-table {
+            margin: 0 0;
+
+            table {
+                margin: 2.5rem 0 0 0;
+                width: 100%;
+                border: 1px solid #e8e8e8;
+
+                tr {
+                    border-bottom: 1px solid #e8e8e8;
+
+                    th {
+                        font-family: $font6;
+                        font-weight: 500;
+                        color: $black;
+                        text-transform: capitalize;
+                        padding: 0.5rem 1.5rem;
+                    }
+
+                    td {
+                        margin: 0 0;
+                        color: #39404a;
+                        border-left: 1px solid #e8e8e8;
+                        padding: 0.5rem 1.5rem;
+                    }
+
+                }
+            }
+        }
+
+        &-review {
+            background: #f5f5f5;
+            padding: 2.8rem 2.8rem;
+            border: 1px solid #d2d1d1;
+            border-radius: 5px;
+
+            // max-width: 520px;
+            @include xss-screen {
+                padding: 2.8rem 1rem;
+            }
+
+            &--body {
+                border-bottom: 1px solid #bdbdbd;
+                padding: 0 0 2.5rem 0;
+            }
+        }
+
+        &-user {
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50px;
+            border: 2px solid $alert;
+            padding: 2px;
+            margin: 0 10px 0 0;
+        }
+
+        &-name {
+            font-family: $font6;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #39404a !important;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        &-date {
+            font-family: $font6;
+            font-size: 0.9rem;
+            color: #555555;
+            text-transform: capitalize;
+            margin: 6px 0 0 0;
+        }
+
+        &-para {
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        &-inp {
+            margin: 0 0 1rem 0;
+            outline: 0;
+            font-family: $font6;
+            box-shadow: none !important;
+            border: 1px solid transparent !important;
+            background: $white !important;
+            transition: all 0.3s linear !important;
+
+            &:focus {
+                transition: all 0.3s linear !important;
+                border: 1px solid $alert !important;
+            }
+
+            // min-width: 576px;
+            @include sm-screen {
+                margin: 0 0;
+            }
+        }
+
+        &-btn {
+            margin: auto !important;
+            padding: 0.4rem 1.5rem !important;
+            font-family: $font6;
+            font-size: 1rem !important;
+            color: $white !important;
+            background: #40bb44d4 !important;
+            box-shadow: none !important;
+            text-transform: capitalize;
+            transition: all 0.3s linear !important;
+
+            &:hover {
+                transition: all 0.3s linear !important;
+                background: $alert !important;
+            }
+
+            // min-width: 576px;
+            @include sm-screen {
+                margin: 0 0 0 1rem !important;
+            }
+        }
+
+        .css-ryrseu-MuiRating-root {
+            display: flex;
+            font-size: 1.3rem;
+            margin: 0.8rem 0 0 0;
+        }
+
+    }
+
+    &__addreview {
+        margin: 0 0;
+        font-family: $font6;
+
+        &-title {
+            margin: 0 0 2rem 0;
+            text-transform: capitalize;
+            font-weight: 500 !important;
+            font-size: 1.7rem !important;
+            color: $C-1 !important;
+        }
+
+        &-inp {
+            box-shadow: none !important;
+            outline: 0 !important;
+            background: #f5f5f5 !important;
+            border: 1px solid transparent !important;
+            transition: all 0.3s linear !important;
+
+            &:focus {
+                transition: all 0.3s linear !important;
+                border: 1px solid $alert !important;
+            }
+        }
+
+        textarea {
+            margin: 0 0 2rem 0;
+            height: 150px;
+            padding: 12px 20px;
+            box-shadow: none !important;
+            outline: 0 !important;
+            background: #f5f5f5 !important;
+            border: 1px solid transparent !important;
+            transition: all 0.3s linear !important;
+
+            &:focus {
+                transition: all 0.3s linear !important;
+                border: 1px solid $alert !important;
+            }
+        }
+    }
+}

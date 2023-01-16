@@ -1,0 +1,29 @@
+.msg {
+    margin: 0 0;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 10%;
+        right: 1%;
+        width: 17rem;
+        height: 3rem;
+        content: "";
+        z-index: 999;
+        background: white;
+        box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.12);
+        border-radius: 3px;
+        border: 1px solid #459c48a3;
+        font-size: 1.1rem;
+        font-family: $font2;
+        text-transform: capitalize;
+        padding: 0 0 0 2.5rem;
+    }
+
+    &__i {
+        color: $alert;
+        font-size: 1.2rem;
+        transform: translate(-12px, -1px);
+    }
+}

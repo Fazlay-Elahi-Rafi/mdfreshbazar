@@ -11,7 +11,7 @@ export default function News() {
       <section className="news">
         <div className="container-fluid p-0">
           <div className="card news__card">
-            <img src={img} class="img-fluid" alt="image" />
+            <img src={img} className="img-fluid" alt="image" />
             <div className="card-img-overlay news__card-layer d-lg-flex justify-conten-center  align-items-center">
               <div className="container">
                 <div className="row align-items-center">

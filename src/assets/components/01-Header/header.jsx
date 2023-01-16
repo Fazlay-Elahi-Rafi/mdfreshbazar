@@ -2,8 +2,6 @@ import React from "react";
 
 import Slider from "react-slick";
 
-import { TbDiscount2 } from "react-icons/tb";
-import { BsCart4 } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 
@@ -12,9 +10,9 @@ import bg2 from "../../img/header-bg02.png";
 import bg3 from "../../img/header-bg03.png";
 import add from "../../img/add-01.png";
 import add2 from "../../img/add-02.png";
+import Props from "./props";
 
 export default function Header() {
-  
   function ArrowLeft(props) {
     const { className, style, onClick } = props;
     return (
@@ -54,130 +52,28 @@ export default function Header() {
         <div className="row">
           <Slider {...settings} className="col-12 col-lg-8 header__item">
             <div className="card header__item-card">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-10 col-sm-9 p-1 d-md-none d-block">
-                  <img src={bg} className="img-fluid" alt="item" />
-                </div>
-                <div className="col-md-7">
-                  <div className="card-body">
-                    <div className="header__item-layer">
-                      <div className="">
-                        <h1 className="header__item-title">
-                          order now free for 24 hour
-                        </h1>
-                        <p className="header__item-para">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Modi, qui! Magni rem ipsam aspernatur ipsa
-                          aliquid aperiam perspiciatis. Earum obcaecati
-                          voluptates nisi beatae asperiores ea facilis enim
-                          culpa maiores atque?
-                        </p>
-
-                        <div className="col-9 col-sm-8 col-md-12 d-lg-flex justify-content-between">
-                          <div className="header__item-button mb-3 mb-lg-0">
-                            <BsCart4 className="header__item-button--icon" />
-                            <button className="btn header__item-button--btn">
-                              order now
-                            </button>
-                          </div>
-                          <div className="header__item-button header__item-button2">
-                            <TbDiscount2 className="header__item-button--icon header__item-button2--icon2" />
-                            <button className="btn header__item-button--btn header__item-button2--btn2">
-                              shop now
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-5 p-1 d-none d-md-block">
-                  <img src={bg} className="img-fluid" alt="item" />
-                </div>
-              </div>
+              <Props
+                img={bg}
+                img2={bg}
+                title="order now free for 24 hour"
+                desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, qui! Magni rem ipsam aspernatur ipsa aliquid aperiam perspiciatis. Earum obcaecati voluptates nisi beatae asperiores ea facilis enim culpa maiores atque?"
+              />
             </div>
             <div className="card header__item-card">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-10 col-sm-9 col-md-5 p-1">
-                  <img src={bg2} className="img-fluid" alt="item" />
-                </div>
-                <div className="col-md-7">
-                  <div className="card-body">
-                    <div className="header__item-layer">
-                      <div className="">
-                        <h1 className="header__item-title">
-                          order now free for 24 hour
-                        </h1>
-                        <p className="header__item-para">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Modi, qui! Magni rem ipsam aspernatur ipsa
-                          aliquid aperiam perspiciatis. Earum obcaecati
-                          voluptates nisi beatae asperiores ea facilis enim
-                          culpa maiores atque?
-                        </p>
-
-                        <div className="col-9 col-sm-8 col-md-12 d-lg-flex justify-content-between">
-                          <div className="header__item-button mb-3 mb-lg-0">
-                            <BsCart4 className="header__item-button--icon" />
-                            <button className="btn header__item-button--btn">
-                              order now
-                            </button>
-                          </div>
-                          <div className="header__item-button header__item-button2">
-                            <TbDiscount2 className="header__item-button--icon header__item-button2--icon2" />
-                            <button className="btn header__item-button--btn header__item-button2--btn2">
-                              shop now
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Props
+                img={bg2}
+                img2={bg2}
+                title="order now free for 24 hour"
+                desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, qui! Magni rem ipsam aspernatur ipsa aliquid aperiam perspiciatis. Earum obcaecati voluptates nisi beatae asperiores ea facilis enim culpa maiores atque?"
+              />
             </div>
             <div className="card header__item-card">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-10 col-sm-9 p-1 d-md-none d-block">
-                  <img src={bg3} className="img-fluid" alt="item" />
-                </div>
-                <div className="col-md-7">
-                  <div className="card-body">
-                    <div className="header__item-layer">
-                      <div className="">
-                        <h1 className="header__item-title">
-                          order now free for 24 hour
-                        </h1>
-                        <p className="header__item-para">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Modi, qui! Magni rem ipsam aspernatur ipsa
-                          aliquid aperiam perspiciatis. Earum obcaecati
-                          voluptates nisi beatae asperiores ea facilis enim
-                          culpa maiores atque?
-                        </p>
-
-                        <div className="col-9 col-sm-8 col-md-12 d-lg-flex justify-content-between">
-                          <div className="header__item-button mb-3 mb-lg-0">
-                            <BsCart4 className="header__item-button--icon" />
-                            <button className="btn header__item-button--btn">
-                              order now
-                            </button>
-                          </div>
-                          <div className="header__item-button header__item-button2">
-                            <TbDiscount2 className="header__item-button--icon header__item-button2--icon2" />
-                            <button className="btn header__item-button--btn header__item-button2--btn2">
-                              shop now
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-5 p-1 d-none d-md-block">
-                  <img src={bg3} className="img-fluid" alt="item" />
-                </div>
-              </div>
+              <Props
+                img={bg3}
+                img2={bg3}
+                title="order now free for 24 hour"
+                desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, qui! Magni rem ipsam aspernatur ipsa aliquid aperiam perspiciatis. Earum obcaecati voluptates nisi beatae asperiores ea facilis enim culpa maiores atque?"
+              />
             </div>
           </Slider>
 
