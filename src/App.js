@@ -14,7 +14,7 @@ import HomePage from "./assets/pages/Home_Page";
 import DetailsPage from "./assets/pages/Details_Page";
 import Error from "./assets/pages/404";
 import CartPage from "./assets/pages/Cart_Page";
-import WishlistPage from "./assets/pages/Wishlist_Page";
+import CollectionPage from "./assets/pages/Collection_Page";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/details/:id" element={<DetailsPage />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="/wishlist" element={<WishlistPage />} />
+          <Route path="/products" element={<CollectionPage />} />
           <Route path="*" element={<Error />} />
         </Routes>
 

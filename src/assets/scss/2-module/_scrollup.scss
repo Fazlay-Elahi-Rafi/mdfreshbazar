@@ -1,8 +1,8 @@
 .scrollup {
     position: fixed;
     z-index: 99;
-    bottom: 2vh;
-    right: 1%;
+    bottom: 11vh;
+    right: 2%;
     background: $alert;
     color: $white;
     box-shadow: 0px 0px 8px 3px rgba(73, 91, 78, 0.25);
@@ -12,4 +12,9 @@
     padding: 13px 13px;
     border-radius: 50%;
     font-size: 1.3rem;
+
+    // min-width: 992px;
+    @include lg-screen {
+        bottom: 2vh;
+    }
 }

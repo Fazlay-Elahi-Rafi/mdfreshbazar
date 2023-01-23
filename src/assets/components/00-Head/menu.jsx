@@ -28,10 +28,10 @@ export default function Menu() {
           <div className="row">
             <ul className="nav__list menu__list">
               <li className="menu__list-li">
-                <a className="" href="#">
+                <Link to="/" className="">
                   <IoHomeOutline className="menu__list-li--icon d-block m-auto" />
                   <span className="menu__list-li--span">home</span>
-                </a>
+                </Link>
               </li>
               <li className="menu__list-li">
                 <button
@@ -39,7 +39,7 @@ export default function Menu() {
                   onClick={() => dispatch({ type: "SHOW_SIDEBAR" })}
                 >
                   <IoListOutline className="menu__list-li--icon d-block m-auto" />
-                  <span className="menu__list-li--span">category</span>
+                  <span className="menu__list-li--span">menu</span>
                 </button>
               </li>
               <li className="menu__list-li">

@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Title from "../components/00-Head/title";
 
 import Header from "../components/01-Header/header";
@@ -11,10 +12,24 @@ import Limited from "../components/07-Limited/limited";
 import Type from "../components/08-All_Types/type";
 import Feedback from "../components/09-FeedBack/feedback";
 
+import { BsCheck2Circle } from "react-icons/bs";
+
 export default function HomePage() {
+  const { msg } = useSelector((state) => state.CartReducer);
   return (
     <>
       <Title title="Home Page" />
+      {msg !== "" ? (
+        <div className="msg">
+          <div className="">
+            <h3 className="msg__text">
+              <BsCheck2Circle className="msg__i" /> {msg}
+            </h3>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
 
       <Header />
       <Items />

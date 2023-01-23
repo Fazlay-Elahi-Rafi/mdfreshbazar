@@ -1,0 +1,127 @@
+.collection {
+    &__filter {
+        margin: 0 0;
+
+        &-title {
+            margin: 0 0 2rem 0;
+            font-size: 1.5rem;
+            font-family: $font7;
+            font-weight: 500;
+            color: $C-1;
+            text-transform: capitalize;
+            border-bottom: 1px solid $border;
+            padding: 0 0 10px 0;
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            font-family: $font2;
+            color: #253D4E;
+            text-transform: capitalize;
+            margin: 0 0 0.8rem 0;
+        }
+
+        &-minus {
+            padding: 0 10px;
+
+            &--i {
+                transform: translate(0, 6px);
+            }
+        }
+
+        .ant-slider {
+            .ant-slider-step {
+                height: 8px;
+            }
+
+            .ant-slider-track {
+                background: #4ab54ed9;
+                height: 8px;
+            }
+
+            .ant-slider-rail {
+                background: #b7b7b761;
+                height: 8px;
+                border-radius: 50px;
+            }
+
+            .ant-slider-handle {
+
+                &::before {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                &::after {
+                    width: 14px;
+                    height: 14px;
+                    box-shadow: 0 0 0 1px $alpha;
+                    transition: all 0.2s linear;
+                }
+
+                &:hover::after {
+                    box-shadow: 0 0 0 2px $alpha;
+                    transition: all 0.2s linear;
+                }
+            }
+        }
+
+        .ant-checkbox-checked .ant-checkbox-inner {
+            border-color: #4ab54ed9 !important;
+            background: $alert !important;
+        }
+
+        .ant-checkbox-wrapper-checked:hover .ant-checkbox:after {
+            border-color: transparent !important;
+        }
+
+
+        &-inp {
+            margin: 0 0;
+            font-family: $font2;
+            font-size: 0.85rem !important;
+            border: 1px solid $border !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+            color: $cate;
+
+            &--label {
+                display: block;
+                text-align: center;
+                font-family: $font2;
+                font-size: 0.95rem;
+                color: $cate;
+                text-transform: capitalize;
+            }
+        }
+
+        &-ul {
+            margin: 0 0;
+            padding: 0 0;
+
+            li {
+                list-style: none;
+                margin: 0 0 0.5rem 0;
+
+                &:last-child {
+                    border-bottom: 1px solid $border;
+                    margin: 0 0 2rem 0;
+                    padding: 0 0 1.5rem 0;
+                }
+            }
+
+            &--name {
+                font-size: 1rem;
+                font-family: $font7;
+                font-weight: 500;
+                color: #000000d4;
+                text-transform: capitalize;
+            }
+
+            &--checkbox {
+                width: 16px;
+                margin: 3px 0 0 0;
+            }
+        }
+    }
+}

@@ -11,8 +11,9 @@
         height: 3rem;
         content: "";
         z-index: 999;
-        background: white;
-        box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.12);
+        color: rgb(30, 70, 32);
+        background: rgb(237, 247, 237);
+        box-shadow: 0px 1px 4px 1px rgba(115, 198, 112, 0.3);
         border-radius: 3px;
         border: 1px solid #459c48a3;
         font-size: 1.1rem;
@@ -23,7 +24,7 @@
 
     &__i {
         color: $alert;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         transform: translate(-12px, -1px);
     }
 }

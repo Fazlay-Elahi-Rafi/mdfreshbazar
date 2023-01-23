@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 
-import { BsCart2, BsFillPatchCheckFill } from "react-icons/bs";
+import { BsCart2 } from "react-icons/bs";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
@@ -17,7 +17,6 @@ import img from "../../img/sells.jpg";
 export default function Sells() {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.ProductRedu);
-  const { msg } = useSelector((state) => state.CartReducer);
 
   const [product, setProduct] = useState(products);
 
@@ -93,17 +92,6 @@ export default function Sells() {
     <>
       <section className="sells">
         <div className="container">
-          {msg !== "" ? (
-            <div className="msg">
-              <div className="">
-                <h3 className="msg__text">
-                  <BsFillPatchCheckFill className="msg__i" /> {msg}
-                </h3>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
           <div className="row mb-4">
             <div className="d-md-flex justify-content-between align-items-end">
               <h1 className="adds__title m-md-0">todays best Sells</h1>
@@ -153,9 +141,12 @@ export default function Sells() {
                             </span>
                           </div>
                           <div className="sells__card-icons">
-                            <div className="sells__card-icons--div lh-1 w-50 text-center">
+                            <Link
+                              to={`/details/${product.id}`}
+                              className="sells__card-icons--div lh-1 w-50 text-center"
+                            >
                               <AiOutlineEye />
-                            </div>
+                            </Link>
                             <div className="sells__card-icons--div lh-1 w-50 text-center">
                               <AiOutlineHeart />
                             </div>
@@ -172,9 +163,12 @@ export default function Sells() {
                         </div>
                         <div className="sells__card-body">
                           <div className="mx-3">
-                            <a href="#" className="limited__card-title">
+                            <Link
+                              to={`/details/${product.id}`}
+                              className="limited__card-title"
+                            >
                               {product.name}
-                            </a>
+                            </Link>
                           </div>
 
                           <ul className="limited__card-ul sells__card-body--ul">

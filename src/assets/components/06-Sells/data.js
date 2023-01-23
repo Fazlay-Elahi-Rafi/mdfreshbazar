@@ -91,6 +91,44 @@ export const Products = [
     save: "15%",
   },
   {
+    id: 11,
+    name: "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+    category: "featured",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
+    oldPrice: 10,
+    price: 15,
+    sold: 50,
+    quantity: 5,
+    rating: 3.5,
+    save: "10%",
+  },
+  {
+    id: 112,
+    name: "Foster Farms Takeout Crispy Classic Buffalo Wings",
+    category: "featured",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-12-min_zgfnr8.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-12-min_zgfnr8.png",
+    oldPrice: 10,
+    price: 15,
+    sold: 50,
+    quantity: 5,
+    rating: 3.5,
+    save: "10%",
+  },
+  {
     id: 5,
     name: "Foster Farms Takeout Crispy Classic Buffalo Wings",
     category: "popular",
@@ -130,7 +168,7 @@ export const Products = [
   },
   {
     id: 7,
-    name: "Blue Diamond Almonds Lightly Salted Vegetables",
+    name: "All Natural Italian-Style Chicken Meatballs",
     category: "popular",
     about:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
@@ -167,8 +205,46 @@ export const Products = [
     save: "10%",
   },
   {
-    id: 9,
+    id: 71,
+    name: "All Natural Italian-Style Chicken Meatballs",
+    category: "popular",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-1-min_nlabgo.png",
+    oldPrice: 25,
+    price: 30,
+    sold: 60,
+    quantity: 2,
+    rating: 4.5,
+    save: "5%",
+  },
+  {
+    id: 81,
     name: "Blue Diamond Almonds Lightly Salted Vegetables",
+    category: "popular",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629837/fruitsBazzar/img-10-min_cppik5.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629837/fruitsBazzar/img-10-min_cppik5.png",
+    oldPrice: 20,
+    price: 80,
+    sold: 50,
+    quantity: 1,
+    rating: 4.0,
+    save: "10%",
+  },
+  {
+    id: 9,
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
     category: "new",
     about:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
@@ -206,7 +282,7 @@ export const Products = [
   },
   {
     id: 11,
-    name: "Blue Diamond Almonds Lightly Salted Vegetables",
+    name: "All Natural Italian-Style Chicken Meatballs",
     category: "new",
     about:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
@@ -225,6 +301,44 @@ export const Products = [
   },
   {
     id: 12,
+    name: "Blue Diamond Almonds Lightly Salted Vegetables",
+    category: "new",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-7-min_oljns9.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629829/fruitsBazzar/img-7-min_oljns9.png",
+    oldPrice: 20,
+    price: 80,
+    sold: 50,
+    quantity: 1,
+    rating: 4.0,
+    save: "10%",
+  },
+  {
+    id: 111,
+    name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+    category: "new",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    about2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, et culpa similique atque numquam debitis iusto deleniti odit eligendi veniam in veritatis facilis exercitationem pariatur perferendis? Autem suscipit quae sint.",
+    image:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629834/fruitsBazzar/img-8-min_hj55cr.png",
+    image_magnify:
+      "https://res.cloudinary.com/mdrafi/image/upload/v1667629834/fruitsBazzar/img-8-min_hj55cr.png",
+    oldPrice: 20,
+    price: 80,
+    sold: 50,
+    quantity: 1,
+    rating: 4.0,
+    save: "10%",
+  },
+  {
+    id: 121,
     name: "Blue Diamond Almonds Lightly Salted Vegetables",
     category: "new",
     about:

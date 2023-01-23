@@ -35,13 +35,13 @@ export default function SmallNav() {
           <div className="">
             <ul className="smallNav__ul">
               <li>
-                <a href="#">home</a>
+                <Link to="/">home</Link>
               </li>
               <li>
                 <a href="#">about</a>
               </li>
               <li>
-                <a href="#">category</a>
+                <Link to="/products">product</Link>
               </li>
               <li>
                 <a href="#">blog</a>

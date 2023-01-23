@@ -122,8 +122,10 @@
             font-weight: 500 !important;
             font-size: 0.9rem !important;
             border-radius: 3px !important;
+            transition: all 0.3s ease-in !important;
 
             &:hover {
+                transition: all 0.3s ease-in !important;
                 background: #DEF9EC !important;
                 color: #39b47beb !important;
             }
@@ -175,24 +177,6 @@
                 @include xl-screen {
                     font-size: 0.9rem;
                 }
-            }
-        }
-
-        &-ul {
-            margin: 0 0;
-            padding: 0 0;
-
-            &--li {
-                list-style: none;
-                display: inline-block;
-                font-size: 1rem;
-                color: $C-1;
-                margin: 0 3px 0 0;
-            }
-
-            &--icon {
-                font-size: 1rem;
-                color: $star;
             }
         }
     }

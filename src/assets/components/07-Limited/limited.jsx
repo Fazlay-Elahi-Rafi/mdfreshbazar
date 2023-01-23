@@ -1,13 +1,29 @@
-import React from "react";
-import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import Props from "./props";
+import { BsCart2 } from "react-icons/bs";
 
-import img from "../../img/l-1.jpg";
-import img2 from "../../img/l-2.jpg";
-import img3 from "../../img/l-3.jpg";
+import Rating from "@mui/material/Rating";
+
+import { data } from "./data";
+import Timer from "./timer";
+
+import { addToCartAction } from "../../redux/action/cartAction";
 
 export default function Limited() {
+  const dispatch = useDispatch();
+
+  const [product, setProduct] = useState(data);
+  const [amount, setAmount] = useState(1);
+
+  const addFun = (id, amount, product) => {
+    dispatch(addToCartAction(id, amount, product));
+
+    setTimeout(() => {
+      dispatch({ type: "CLEAR_CART_ERROR" });
+    }, 3000);
+  };
+
   return (
     <>
       <section className="limited">
@@ -18,57 +34,79 @@ export default function Limited() {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 col-sm-10 col-md-6 col-lg-4">
-              <Props
-                targetDate="Oct 25, 2030"
-                targetTime="18:00:00"
-                img={img}
-                title="Perdue Simply Smart Organics Gluten"
-                icon1={<BsStarFill className="limited__card-ul--icon" />}
-                icon2={<BsStarFill className="limited__card-ul--icon" />}
-                icon3={<BsStarFill className="limited__card-ul--icon" />}
-                icon4={<BsStarFill className="limited__card-ul--icon" />}
-                icon5={<BsStarHalf className="limited__card-ul--icon" />}
-                spon="mdRafi"
-                rating="(4.0)"
-                new="$35.50"
-                old="$15.50"
-              />
-            </div>
-            <div className="col-12 col-sm-10 col-md-6 col-lg-4">
-              <Props
-                targetDate="Oct 25, 2029"
-                targetTime="17:00:00"
-                img={img2}
-                title="Pepperidge Farm Farmhouse Hearty White Bread"
-                icon1={<BsStarFill className="limited__card-ul--icon" />}
-                icon2={<BsStarFill className="limited__card-ul--icon" />}
-                icon3={<BsStarFill className="limited__card-ul--icon" />}
-                icon4={<BsStarFill className="limited__card-ul--icon" />}
-                icon5={<BsStarHalf className="limited__card-ul--icon" />}
-                spon="mdRafi"
-                rating="(4.0)"
-                new="$15.50"
-                old="$25.50"
-              />
-            </div>
-            <div className="col-12 col-sm-10 col-md-6 col-lg-4">
-              <Props
-                targetDate="Oct 25, 2030"
-                targetTime="18:00:00"
-                img={img3}
-                title=" Seeds of Change Organic Quinoa Farmhouse"
-                icon1={<BsStarFill className="limited__card-ul--icon" />}
-                icon2={<BsStarFill className="limited__card-ul--icon" />}
-                icon3={<BsStarFill className="limited__card-ul--icon" />}
-                icon4={<BsStarFill className="limited__card-ul--icon" />}
-                icon5={<BsStarHalf className="limited__card-ul--icon" />}
-                spon="mdRafi"
-                rating="(4.0)"
-                new="$25.50"
-                old="$10.50"
-              />
-            </div>
+            {product.map((data) => {
+              return (
+                <div
+                  className="col-12 col-sm-10 col-md-6 col-lg-4"
+                  key={data.id}
+                >
+                  <div className="card limited__card border-0">
+                    <img
+                      src={data.image}
+                      className="img-fluid limited__card-img"
+                      alt="fruits img"
+                    />
+                    <div className="limited__card-body">
+                      <Timer
+                        targetDate={data.targetDate}
+                        targetTime={data.targetTime}
+                      />
+
+                      <div className="">
+                        <a href="#" className="limited__card-title">
+                          {data.name}
+                        </a>
+
+                        <Rating
+                          sx={{
+                            color: "#e5b700",
+                            fontSize: "1.5rem",
+                            margin: "5px 0 8px -3px",
+                          }}
+                          name="half-rating-read"
+                          defaultValue={data && data.rating}
+                          precision={0.5}
+                          max={5}
+                          readOnly
+                        />
+
+                        <div className="mt-0">
+                          <h5 className="limited__card-by">
+                            by
+                            <a href="#" className="limited__card-by--span">
+                              {data.onwer}
+                            </a>
+                          </h5>
+                        </div>
+
+                        <div className="d-flex justify-content-between align-items-center mt-4">
+                          <div className="limited__card-price">
+                            <span className="limited__card-price--new">
+                              ${data.price}
+                            </span>
+                            <del className="limited__card-price--old">
+                              ${data.oldPrice}
+                            </del>
+                          </div>
+                          <div className="">
+                            <button
+                              href="#"
+                              className="limited__card-btn btn"
+                              onClick={() => addFun(data.id, amount, data)}
+                            >
+                              <span>
+                                <BsCart2 className="limited__card-btn--icon" />
+                              </span>
+                              add
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
