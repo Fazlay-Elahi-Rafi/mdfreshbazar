@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
@@ -15,10 +16,10 @@ export default function Empty() {
             </h2>
           </div>
           <div className="">
-            <button className="cart__clearbtn cart__empty-btn">
+            <Link to="/products" className="cart__clearbtn cart__empty-btn">
               <HiOutlineShoppingBag className="cart__empty-btn--i" />
               continue shopping
-            </button>
+            </Link>
           </div>
         </div>
       </div>

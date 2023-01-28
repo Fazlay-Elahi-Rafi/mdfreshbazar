@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import Rating from "@mui/material/Rating";
@@ -6,9 +7,23 @@ import Rating from "@mui/material/Rating";
 import { BsCart2 } from "react-icons/bs";
 import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 
+import { addToCartAction } from "../../redux/action/cartAction";
+
 export default function CollectionBody({ product, isActive }) {
   const { id, save, image, name, rating, about, price, oldPrice } = product;
 
+  const dispatch = useDispatch();
+
+  const [amount, setAmount] = useState(1);
+
+  const addFun = (id, amount, product) => {
+    dispatch(addToCartAction(id, amount, product));
+
+    setTimeout(() => {
+      dispatch({ type: "CLEAR_CART_ERROR" });
+    }, 3000);
+  };
+  
   return (
     <div
       key={id}
@@ -89,9 +104,7 @@ export default function CollectionBody({ product, isActive }) {
             <div className="">
               <button
                 className="limited__card-btn btn"
-                // onClick={() =>
-                //   addFun(id, amount,
-                // }
+                onClick={() => addFun(id, amount, product)}
               >
                 <span>
                   <BsCart2 className="limited__card-btn--icon" />

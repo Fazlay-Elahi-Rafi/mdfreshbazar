@@ -110,7 +110,6 @@
 
     &__clearbtn {
         margin: 2rem 0 0 0;
-        // background: #f34d11d4 !important;
         background: #f34d11d4;
         color: $white;
         box-shadow: none !important;
@@ -141,6 +140,7 @@
             font-weight: 600;
             color: $C-1;
             line-height: 3rem;
+            margin: 0 0 2rem 0;
         }
 
         &-span {
@@ -148,11 +148,10 @@
         }
 
         &-btn {
-            display: flex;
-            align-items: center;
-            margin: 2rem auto 0 auto;
+            margin: 0 0;
+            text-decoration: none;
             background: $alert !important;
-            color: $white;
+            color: $white !important;
             padding: 0.9rem 2rem;
             transition: all 0.2s linear;
 
@@ -163,7 +162,7 @@
 
             &--i {
                 font-size: 1.4rem;
-                transform: translate(-6px, -1px);
+                transform: translate(-6px, -4px);
             }
         }
     }
