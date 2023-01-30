@@ -45,9 +45,16 @@
   }
 }
 
-//Medium Screen (max-width: 768)
+//Medium Screen (max-width: 767)
 @mixin mdx-screen {
   @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+//Large Screen (min-width: 991)
+@mixin xlg-screen {
+  @media screen and (max-width: 991px) {
     @content;
   }
 }

@@ -12,11 +12,11 @@ import { BsCheck2Circle } from "react-icons/bs";
 
 export default function CollectionPage() {
   const { msg } = useSelector((state) => state.CartReducer);
-  
+
   return (
     <>
       <Title title="Collection Page" />
-      <Banner title="your collection" text="product" img={img} />
+      <Banner title="your products" text="product" img={img} />
       {msg !== "" ? (
         <div className="msg">
           <div className="">

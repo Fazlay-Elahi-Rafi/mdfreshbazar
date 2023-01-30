@@ -5,7 +5,7 @@ import Props from "./props";
 import user1 from "../../img/clients-3.jpg";
 import user2 from "../../img/clients-2.jpg";
 
-export default function AboutProduct() {
+export default function AboutProduct({ product }) {
   return (
     <div className="view__desc">
       <div className="row">
@@ -53,35 +53,26 @@ export default function AboutProduct() {
                 role="tabpanel"
                 aria-labelledby="home-tab"
               >
-                <p className="view__para">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quas, velit ut. Voluptatibus minus provident quibusdam dolore
-                  deserunt omnis impedit natus velit sint cupiditate cum, culpa
-                  aliquam accusantium a ullam voluptas! Lorem ipsum dolor sit
-                  amet, consectetur adipisicing elit. Quas, velit ut.
-                  Voluptatibus minus provident quibusdam dolore deserunt omnis
-                  impedit natus velit sint cupiditate cum, culpa aliquam
-                  accusantium a ullam voluptas!
-                </p>
+                <p className="view__para">{product.about}</p>
 
-                <div className="view__desc-table">
+                <div className="view__desc-table text-capitalize">
                   <table>
                     <tbody>
                       <tr>
                         <th>product code</th>
-                        <td>#56874</td>
+                        <td>#{product.id}</td>
                       </tr>
                       <tr>
                         <th>weight</th>
-                        <td>1kg,2.5kg</td>
+                        <td>{product.weight}kg</td>
                       </tr>
                       <tr>
-                        <th>style</th>
-                        <td>@carton</td>
+                        <th>type</th>
+                        <td>@{product.type}</td>
                       </tr>
                       <tr>
-                        <th>Piece In One</th>
-                        <td>Carton</td>
+                        <th>category</th>
+                        <td>{product.category}</td>
                       </tr>
                     </tbody>
                   </table>

@@ -198,7 +198,7 @@ export default function View() {
             </div>
           </div>
 
-          <AboutProduct />
+          <AboutProduct product={product} />
           <AddReview />
         </div>
       )}

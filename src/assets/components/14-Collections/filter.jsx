@@ -1,157 +1,208 @@
-import React, { useState } from "react";
-import { InputNumber, Slider, Checkbox } from "antd";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-import { AiOutlineMinus } from "react-icons/ai";
+import { BsGrid } from "react-icons/bs";
+import { AiOutlineUnorderedList } from "react-icons/ai";
+import { GrFilter } from "react-icons/gr";
 
-import { Size, Type } from "./filter_data";
+import { Size, Type, Rating, Category } from "./filter_data";
 
-export default function Filter() {
-  const [filter, setFilter] = useState({ Size, Type });
+import FilterPanel from "./filterPanel";
+import OutPut from "./body";
+import SearchBar from "./search";
+import Sort from "./sort";
+import NotMatch from "./notMatch";
 
-  const [minPrice, setMinPrice] = useState(300);
-  const [maxPrice, setMaxPrice] = useState(2000);
+import { applyFilter } from "./applyFilter";
 
-  const getSizeFun = (list) => {
-    console.log("Size = ", list);
+import img from "../../img/header-bg04.png";
+
+const Filter = ({ product }) => {
+  const dispatch = useDispatch();
+  const { filter } = useSelector((any) => any.ClickRedu);
+
+  const [productList, setProductList] = useState(product);
+
+  const [selectedPrice, setSelectedPrice] = useState([0, 1000]);
+  const [selectedRating, setSelectedRating] = useState(Rating);
+  const [selectedCategory, setSelectedCategory] = useState(Category);
+  const [selectedWeight, setSelectedWeight] = useState(Size);
+  const [type, setType] = useState(Type);
+
+  const [resultsFound, setResultsFound] = useState(true);
+  const [isActive, setActive] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
+
+  // ------> Rating__Checked Function
+  const handleChangeRating = (id) => {
+    const ratingStateList = selectedRating;
+    const changeCheckedRating = ratingStateList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setSelectedRating(changeCheckedRating);
   };
 
-  const getTypeFun = (checkedValues) => {
-    console.log("Type = ", checkedValues);
+  // ------> Type__Checked Function
+  const handleChangeCheckedType = (id) => {
+    const typeState = type;
+    const changeCheckedType = typeState.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+
+    setType(changeCheckedType);
   };
 
-  const getAvailFun = (checkedValues) => {
-    console.log("Available = ", checkedValues);
+  // ------> Category__Checked Function
+  const handleChangeCate = (id) => {
+    const categoryStateList = selectedCategory;
+    const changeCheckedCategory = categoryStateList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setSelectedCategory(changeCheckedCategory);
   };
 
+  // ------> Weight__Checked Function
+  const handleChangeWeight = (id) => {
+    const weightList = selectedWeight;
+    const changeCheckedWeight = weightList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+
+    setSelectedWeight(changeCheckedWeight);
+  };
+
+  // ------> Price__Checked Function
+  const handleChangePrice = (event, value) => {
+    setSelectedPrice(value);
+  };
+
+  useEffect(() => {
+    applyFilter({
+      product,
+      selectedRating,
+      type,
+      selectedCategory,
+      selectedWeight,
+      searchInput,
+      selectedPrice,
+      setProductList,
+      setResultsFound,
+    });
+  }, [
+    selectedRating,
+    type,
+    searchInput,
+    selectedPrice,
+    selectedCategory,
+    selectedWeight,
+    product,
+  ]);
 
   return (
     <>
-      <div className="collection__filter">
-        <h3 className="collection__filter-title">filter</h3>
+      <div
+        className={` ${filter ? "collection__filter-panel--background" : ""}`}
+        onClick={() => dispatch({ type: "HIDE_FILTER" })}
+      ></div>
 
-        <div className="">
-          <h4 className="collection__filter-text">size</h4>
-          <ul className="collection__filter-ul">
-            {filter.Size.map((sz) => {
-              return (
-                <li key={sz.id}>
-                  <Checkbox.Group onChange={getSizeFun}>
-                    <Checkbox
-                      className="collection__filter-ul--name"
-                      value={sz.size}
-                    >
-                      {sz.size}
-                    </Checkbox>
-                  </Checkbox.Group>
-                </li>
-              );
-            })}
-          </ul>
+      <div
+        className={`col-10 col-sm-6 col-md-5 col-lg-3 collection__filter ${
+          filter
+            ? "d-lg-block collection__filter-panel"
+            : "collection__filter-panel--hide"
+        }`}
+      >
+        <div className={`${filter ? "collection__filter-panel--body" : ""}`}>
+          <FilterPanel
+            selectRating={handleChangeRating}
+            selectedRating={selectedRating}
+            types={type}
+            changeChecked={handleChangeCheckedType}
+            selectedCategory={selectedCategory}
+            changeCheckedCate={handleChangeCate}
+            selectedWeight={selectedWeight}
+            changeCheckedWeight={handleChangeWeight}
+            selectedPrice={selectedPrice}
+            changePrice={handleChangePrice}
+          />
         </div>
+      </div>
 
-        <div>
-          <h4 className="collection__filter-text">by price</h4>
-          <ul className="collection__filter-ul">
-            <li>
-              <Slider
-                className="collection__filter-range"
-                range
-                min={1}
-                max={2000}
-                value={[minPrice, maxPrice]}
-                onChange={([min, max]) => {
-                  setMinPrice(min);
-                  setMaxPrice(max);
-                }}
-              />
-
-              <div className="d-flex justify-content-center">
-                <div className="">
-                  <InputNumber
-                    className="collection__filter-inp"
-                    min={1}
-                    max={2000}
-                    value={minPrice}
-                    onChange={(e) => {
-                      if (e >= 0) {
-                        setMinPrice(e);
-                      }
-                    }}
-                  />
-                  <label className="collection__filter-inp--label">Min</label>
-                </div>
-
-                <div className="collection__filter-minus">
-                  <AiOutlineMinus className="collection__filter-minus--i" />
-                </div>
-
-                <div className="">
-                  <InputNumber
-                    className="collection__filter-inp"
-                    min={1}
-                    max={2000}
-                    value={maxPrice}
-                    onChange={(e) => {
-                      if (e >= 0) {
-                        setMaxPrice(e);
-                      }
-                    }}
-                  />
-                  <label className="collection__filter-inp--label">Max</label>
-                </div>
+      <div className="col-12 col-lg-8">
+        <div className="row px-2 px-sm-0">
+          <div className="card collection__adds">
+            <img
+              src={img}
+              className="img-fluid w-50 h-100 ms-auto"
+              alt="image"
+            />
+            <div className="card-img-overlay collection__adds-layer">
+              <div className="col-12 col-sm-10 col-md-7 col-lg-8 col-xl-6">
+                <p className="collection__adds-offer">
+                  best organic fruit get 40% off
+                </p>
+                <h5 className="collection__adds-text">
+                  fresh and organic vegetable & fruit
+                </h5>
               </div>
-            </li>
-
-            <li></li>
-          </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="">
-          <h4 className="collection__filter-text">type</h4>
-          <ul className="collection__filter-ul">
-            {filter.Type.map((typ) => {
-              return (
-                <li key={typ.id}>
-                  <Checkbox.Group onChange={getTypeFun}>
-                    <Checkbox
-                      className="collection__filter-ul--name"
-                      value={typ.typs}
-                    >
-                      {typ.typs}
-                    </Checkbox>
-                  </Checkbox.Group>
-                </li>
-              );
-            })}
-          </ul>
+        <div className="row px-2 px-sm-0">
+          <div className="collection__bar">
+            <div
+              className="d-flex d-lg-none"
+              onClick={() => dispatch({ type: "SHOW_FILTER" })}
+            >
+              <GrFilter className="collection__bar-i m-0" />
+              <h4 className="collection__filter-ul--name ps-2">filter</h4>
+            </div>
+
+            <div className="collection__bar-icons text-end text-sm-start">
+              <BsGrid
+                className={`collection__bar-i ${
+                  isActive ? "" : "collection__bar-active"
+                }`}
+                onClick={() => setActive(false)}
+              />
+              <AiOutlineUnorderedList
+                className={`collection__bar-i ${
+                  isActive ? "collection__bar-active" : ""
+                }`}
+                onClick={() => setActive(true)}
+              />
+            </div>
+
+            <div className="col-12 col-md-5 col-xl-6 mt-4 mt-md-0 collection__bar-search">
+              <SearchBar
+                value={searchInput}
+                changeInput={(e) => setSearchInput(e.target.value)}
+              />
+            </div>
+
+            <div className="collection__bar-sort text-sm-end text-start">
+              <Sort />
+            </div>
+          </div>
         </div>
 
-        <div className="">
-          <h4 className="collection__filter-text">availability</h4>
-          <ul className="collection__filter-ul">
-            <li>
-              <Checkbox.Group className="d-block" onChange={getAvailFun}>
-                <div className="mb-2">
-                  <Checkbox
-                    className="collection__filter-ul--name"
-                    value="in stock"
-                  >
-                    in stock
-                  </Checkbox>
-                </div>
-                <div className="">
-                  <Checkbox
-                    className="collection__filter-ul--name"
-                    value="out of stock"
-                  >
-                    out of stock
-                  </Checkbox>
-                </div>
-              </Checkbox.Group>
-            </li>
-          </ul>
+        <div className="row px-2 px-sm-0">
+          {resultsFound ? (
+            <>
+              {productList.map((product, index) => (
+                <OutPut key={product.id} list={product} isActive={isActive} />
+              ))}
+            </>
+          ) : (
+            <>
+              <NotMatch value={searchInput} />
+            </>
+          )}
         </div>
       </div>
     </>
   );
-}
+};
+
+export default Filter;

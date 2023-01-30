@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -20,8 +20,18 @@ export default function App() {
   const dispatch = useDispatch();
   const { total_items, cart } = useSelector((state) => state.CartReducer);
 
+  const [width, setWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     dispatch({ type: "COUNT_CART_TOTALS" });
+
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    if (width > 992) {
+      dispatch({ type: "HIDE_SIDEBAR" });
+      dispatch({ type: "HIDE_FILTER" });
+    }
 
     webFont.load({
       google: {
@@ -35,7 +45,7 @@ export default function App() {
         ],
       },
     });
-  }, [cart]);
+  }, [cart, width]);
   return (
     <>
       <Router>

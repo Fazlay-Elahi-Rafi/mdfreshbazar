@@ -39,6 +39,7 @@
         &-items {
             border: 1px solid #dddddd !important;
             transition: all 0.3s linear !important;
+            overflow: hidden;
 
             &:hover {
                 transition: all 0.3s linear !important;
