@@ -23,8 +23,9 @@ export default function FilterPanel({
         <ul className="collection__filter-ul">
           {selectedCategory.map((cate) => {
             return (
-              <li className="collection__filter-ul--nam" key={cate.id}>
+              <li className="" key={cate.id}>
                 <FormControlLabel
+                  className="collection__filter-ul--label"
                   control={
                     <Checkbox
                       sx={{ padding: "0", color: "#2ea26d" }}
@@ -68,6 +69,7 @@ export default function FilterPanel({
             return (
               <li key={type.id}>
                 <FormControlLabel
+                  className="collection__filter-ul--label"
                   control={
                     <Checkbox
                       sx={{ padding: "0", color: "#2ea26d" }}
@@ -94,6 +96,7 @@ export default function FilterPanel({
             return (
               <li key={sz.id}>
                 <FormControlLabel
+                  className="collection__filter-ul--label"
                   control={
                     <Checkbox
                       sx={{ padding: "0", color: "#2ea26d" }}
@@ -121,6 +124,7 @@ export default function FilterPanel({
               return (
                 <li key={star.id}>
                   <FormControlLabel
+                    className="collection__filter-ul--label"
                     control={
                       <Checkbox
                         sx={{ padding: "0", color: "#2ea26d" }}

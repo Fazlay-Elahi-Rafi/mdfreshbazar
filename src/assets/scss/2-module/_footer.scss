@@ -108,20 +108,23 @@
     }
 
     &__bottom {
-        background: #4dc157;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
         justify-content: space-between;
         align-items: center;
         border-radius: 8px 8px 0 0;
         padding: 16px 0;
+        border-top: 1px solid #14b35173;
+        border-left: 1px solid #14b35173;
+        border-right: 1px solid #14b35173;
 
         &-p {
             margin: 0 0;
-            color: $white;
+            color: $C-1;
             font-family: $font;
             font-size: 1rem;
 
             a {
-                color: #153556 !important;
+                color: #47994e !important;
                 font-family: $font;
                 font-size: 1rem;
                 font-weight: 600;

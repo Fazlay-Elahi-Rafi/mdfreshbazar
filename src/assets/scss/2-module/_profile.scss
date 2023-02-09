@@ -1,0 +1,186 @@
+.profile {
+    margin: 5rem 0;
+
+    &__img {
+        margin: 0 0;
+        width: 170px;
+        height: 170px !important;
+        border-radius: 100%;
+        border: 3px solid #2ea26d !important;
+        box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.20);
+    }
+
+    &__user {
+        margin: 0 0;
+
+        &-name {
+            margin: 1rem 0 0.5rem 0;
+            color: $C-1;
+            font-family: $font6;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+        }
+
+        &-email {
+            margin: 0 0 1.5rem 0;
+            font-family: $font6;
+            font-size: 1rem;
+            color: $text-2;
+        }
+    }
+
+    &__social {
+        margin: 0 0 2rem 0;
+    }
+
+    &__info {
+        margin: 0 0;
+
+        &-layer {
+            padding: 1.5rem 1rem;
+            margin: 0 0 2rem 0;
+            background: #F5F6F7;
+            box-shadow: 1px 3px 10px 3px rgba(196, 201, 206, 0.38);
+            border: 1px solid #9ee9c757;
+
+            // min-width: 768px;
+            @include md-screen {
+                margin: 0 0 2rem 0;
+            }
+        }
+
+        &-scroll {
+            overflow-y: scroll;
+            height: 60px;
+            direction: rtl;
+            padding: 0 0 0 8px;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 3px;
+
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #459c48;
+            border-radius: 10px;
+        }
+
+        &-heading {
+            font-family: $font6;
+            font-size: 1.3rem;
+            color: $C-1;
+            text-transform: capitalize;
+            margin: 0 0 1.5rem 0;
+        }
+
+        &-desc {
+            font-size: 0.9rem;
+            font-family: $font6;
+            color: $text-2;
+            direction: ltr;
+        }
+
+        &-body {
+            margin: 0 0;
+
+            &--list {
+                margin: 0 0;
+                padding: 0 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                overflow: hidden;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.9rem;
+                    font-family: $font6;
+                    color: $text-2;
+
+                    &:nth-child(1) {
+                        margin: 0 0 1rem 0;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 0 0 1rem 0;
+                    }
+                }
+            }
+
+            &--i {
+                color: $cate;
+                margin: 0 8px 0 0;
+                font-size: 1.2rem;
+            }
+        }
+
+        &-input {
+            margin: 0 0;
+
+            // min-width: 576px;
+            @include sm-screen {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem 1rem;
+            }
+
+            // min-width: 992px;
+            @include lg-screen {
+                gap: 1rem 3rem;
+            }
+
+            label {
+                font-size: 1rem;
+                font-family: $font6;
+                color: $C-1;
+                margin: 0 0 6px 0;
+
+                // min-width: 768px;
+                @include md-screen {
+                    font-size: 0.85rem;
+                }
+
+                // min-width: 992px;
+                @include lg-screen {
+                    font-size: 1rem;
+                }
+            }
+
+            input,
+            textarea,
+            select {
+                margin: 0 0 1rem 0;
+                border: 2px solid #2ea26d87 !important;
+
+                // min-width: 576px;
+                @include sm-screen {
+                    margin: 0 0;
+                }
+            }
+
+            select {
+                text-transform: capitalize;
+                color: $menu !important;
+            }
+
+            &--desc {
+                grid-column: 1/3;
+            }
+
+            &--submit {
+                grid-column: 1/3;
+                text-align: end;
+
+                input {
+                    border: 1px solid #2ea26d87 !important;
+                    padding: 8px 1.5rem;
+                }
+            }
+        }
+    }
+
+}

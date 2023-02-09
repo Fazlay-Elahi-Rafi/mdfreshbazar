@@ -1,0 +1,44 @@
+.profile {
+    &__sidebar {
+        padding: 2rem 0;
+        background: #F5F6F7;
+        box-shadow: 1px 3px 10px 3px rgba(196, 201, 206, 0.38);
+        border: 1px solid #9ee9c757;
+        margin: 0 0 2rem 0;
+
+        // min-width: 768px;
+        @include md-screen {
+            margin: 0 0;
+        }
+
+        &-btn {
+            margin: 0 0;
+            padding: 1rem 0 1rem 1rem !important;
+            display: flex !important;
+            align-items: center;
+            color: $C-1 !important;
+            font-family: $font2;
+            font-size: 1rem !important;
+            text-transform: capitalize;
+            border-radius: 0 !important;
+            border-left: 2px solid transparent !important;
+
+            &:hover {
+                color: #2ea26d !important;
+                background: #9ee9c757 !important;
+                border-left: 2px solid #2ea26d !important;
+            }
+
+            &--i {
+                margin: 0 0.5rem 0 0;
+                font-size: 1.2rem;
+            }
+        }
+
+        .active {
+            color: #2ea26d !important;
+            background: #9ee9c757 !important;
+            border-left: 2px solid #2ea26d !important;
+        }
+    }
+}

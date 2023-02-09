@@ -43,9 +43,9 @@ export default function Middle() {
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link to="/profile" className="dropdown-item" href="#">
                       profile
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
