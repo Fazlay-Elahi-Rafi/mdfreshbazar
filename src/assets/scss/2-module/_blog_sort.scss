@@ -1,0 +1,187 @@
+.blog {
+    &__sort {
+        padding: 2rem 0;
+        margin: 0 0 2.5rem 0;
+        border-bottom: 1px solid $border-3 !important;
+
+        &-label {
+            margin: 0 0.8rem 0 1.8rem;
+            font-family: $font6;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $label;
+            text-transform: uppercase;
+        }
+
+        &-select {
+            background-color: transparent !important;
+            text-transform: capitalize;
+            font-size: 1rem !important;
+            background-size: 14px 13px !important;
+            padding: 7px 40px 7px 16px !important;
+            cursor: pointer;
+            box-shadow: none !important;
+            outline: 0 !important;
+            border: 1px solid $border !important;
+        }
+
+        &-i {
+            margin: 0 0 0 18px;
+            font-size: 1.3rem;
+            cursor: pointer;
+
+            &--active {
+                color: $white;
+                background: $alert;
+                width: 42px;
+                height: 42px;
+                padding: 11px 0;
+                border-radius: 100px;
+            }
+        }
+
+    }
+
+    &__news {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+
+        // min-width: 768px;
+        @include md-screen {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &-card {
+            border: 1px solid #c1dec2 !important;
+            outline: 0 !important;
+            background: transparent !important;
+            border-radius: 25px !important;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transition: all 0.2s linear;
+                box-shadow: 0 0px 6px 0px rgb(166, 166, 166, 0.4);
+            }
+
+            &:hover &--img img {
+                transition: all 0.2s linear;
+                transform: scale(1.05);
+
+            }
+
+            &--img {
+                overflow: hidden;
+                border-radius: 25px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+
+                img {
+                    transition: all 0.2s linear;
+                    transform: scale(1);
+                }
+            }
+        }
+
+        &-text {
+            font-size: 0.75rem;
+            font-family: $font6;
+            color: $text-2;
+            text-transform: uppercase;
+
+            // min-width: 576px;
+            @include iphn-screen {
+                font-size: 0.95rem;
+            }
+
+            // min-width: 992px;
+            @include lg-screen {
+                font-size: 0.75rem;
+            }
+
+            // min-width: 1200px;
+            @include xl-screen {
+                font-size: 0.95rem;
+            }
+        }
+
+        &-i {
+            color: $alert;
+            font-size: 1rem;
+            margin: -5px 5px 0 0;
+        }
+
+        &-title {
+            margin: 1.3rem 0 0 0;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: $font6;
+            font-weight: 600;
+            color: $C-1;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transition: all 0.2s linear;
+                color: $alert;
+            }
+
+            // min-width: 992px;
+            @include lg-screen {
+                font-size: 1.1rem;
+            }
+
+            // min-width: 1200px;
+            @include xl-screen {
+                font-size: 1.3rem;
+            }
+        }
+
+        &-desc {
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            color: $link !important;
+        }
+
+        &-btn {
+            margin: 1rem 0 0 0;
+            font-size: 0.95rem;
+            font-family: $font7;
+            text-transform: capitalize;
+            background: transparent;
+            border-radius: 100px;
+            border: 1px solid $alert;
+            padding: 10px 25px;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transition: all 0.2s linear;
+                color: $white;
+                background: $alert;
+            }
+
+            &:hover &--i {
+                transition: all 0.2s linear;
+                color: $white;
+                transform: translate(5px, 0px);
+            }
+
+            &--i {
+                color: $alert;
+                font-size: 14px;
+                transform: translate(0, 0px);
+            }
+
+        }
+    }
+
+    
+}

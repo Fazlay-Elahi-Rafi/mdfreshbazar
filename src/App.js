@@ -12,6 +12,7 @@ import Footer from "./assets/components/012-Footer/footer";
 // --------> Pages's
 import HomePage from "./assets/pages/Home_Page";
 import DetailsPage from "./assets/pages/Details_Page";
+import BlogPage from "./assets/pages/Blog_Page";
 import CartPage from "./assets/pages/Cart_Page";
 import CollectionPage from "./assets/pages/Collection_Page";
 import ProfilePage from "./assets/pages/Profile_Page";
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/details/:id" element={<DetailsPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/products" element={<CollectionPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<Error />} />

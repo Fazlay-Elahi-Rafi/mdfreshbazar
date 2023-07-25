@@ -6,7 +6,7 @@ import { FaHeart, FaShoppingBasket } from "react-icons/fa";
 import { ImSearch } from "react-icons/im";
 
 import logo from "../../img/logo.png";
-import user from "../../img/user.jpg";
+import user from "../../img/myself.jpg";
 
 export default function Middle() {
   const { total_items } = useSelector((state) => state.CartReducer);

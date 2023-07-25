@@ -1,0 +1,51 @@
+.blog {
+    &__paginat {
+        font-family: $font7;
+        border: 1px solid $label !important;
+        color: $C-2 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        outline: 0 !important;
+        border-radius: 12px !important;
+        padding: 8px 16px !important;
+        font-size: 1rem !important;
+        margin: 0 5px;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            color: $white !important;
+            background-image: linear-gradient(to right, #56a958, #63c566e6) !important;
+            border: 1px solid transparent !important;
+            transition: all 0.2s ease-in;
+        }
+
+        &-active {
+            color: $white !important;
+            background-image: linear-gradient(to right, #56a958, #63c566e6) !important;
+            border: 1px solid transparent !important;
+        }
+
+        &-arrow {
+            padding: 8px 13px 8px 13px !important;
+            border: 1px solid $label !important;
+            color: $C-2 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+            border-radius: 50px !important;
+            transition: all 0.2s linear !important;
+
+            &:hover {
+                transition: all 0.2s linear !important;
+                color: $white !important;
+                background-image: linear-gradient(to right, #56a958, #63c566e6) !important;
+                border: 1px solid transparent !important;
+            }
+
+        }
+
+        &-icon {
+            margin: -3px 0 0 0;
+        }
+    }
+}

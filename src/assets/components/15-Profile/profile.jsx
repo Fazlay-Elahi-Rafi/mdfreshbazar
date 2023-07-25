@@ -7,7 +7,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-import img from "../../img/clients-1.jpg";
+import img from "../../img/myself.jpg";
 
 import Sidebar from "./sidebar";
 import Info from "./info";

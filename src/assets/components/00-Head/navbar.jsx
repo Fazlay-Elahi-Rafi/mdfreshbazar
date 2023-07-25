@@ -29,7 +29,7 @@ export default function Navbar() {
                     <Link to="/products">product</Link>
                   </li>
                   <li>
-                    <a href="#">blog</a>
+                    <Link to="/blog">blog</Link>
                   </li>
                   <li>
                     <div className="nav__list-dropdown">
