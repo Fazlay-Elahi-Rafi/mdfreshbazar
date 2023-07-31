@@ -14,6 +14,7 @@ import { BsGrid } from "react-icons/bs";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 
 import BlogNews from "./blogNews";
+import BlogWidget from "./blogWidget";
 
 import author from "../../img/myself.jpg";
 
@@ -131,7 +132,9 @@ export default function Blog() {
 
               <BlogNews />
             </div>
-            {/* <div className="col-md-7 col-lg-4"></div> */}
+            <div className="d-none d-lg-block col-lg-4">
+              <BlogWidget />
+            </div>
           </div>
         </div>
       </section>
